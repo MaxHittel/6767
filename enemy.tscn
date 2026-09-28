@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://bvapjmue12iyl"]
+
+[ext_resource type="Script" uid="uid://cevsx6uk3rwve" path="res://Enemy.cs" id="1_4gyqm"]
+[ext_resource type="Texture2D" uid="uid://cxu2v7u74jd0r" path="res://spritesheet (1).png" id="1_7k104"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4gyqm"]
+atlas = ExtResource("1_7k104")
+region = Rect2(0, 541, 461, 541)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qi2p4"]
+atlas = ExtResource("1_7k104")
+region = Rect2(0, 0, 461, 541)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hadtg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4gyqm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qi2p4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ll77n"]
+size = Vector2(269, 420)
+
+[node name="Enemy" type="Node2D" unique_id=931270365]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=64161333 node_paths=PackedStringArray("Player")]
+scale = Vector2(0.18187948, 0.16118203)
+script = ExtResource("1_4gyqm")
+Player = NodePath(".")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=315496228]
+sprite_frames = SubResource("SpriteFrames_hadtg")
+autoplay = "default"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=814855456]
+position = Vector2(-0.5, 17)
+shape = SubResource("RectangleShape2D_ll77n")

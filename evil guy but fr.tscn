@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://wyi226tijr2h"]
+
+[ext_resource type="Script" uid="uid://c6b1fg1o30d0j" path="res://EvilGuyButFr.cs" id="1_dyxq1"]
+[ext_resource type="Texture2D" uid="uid://cxu2v7u74jd0r" path="res://spritesheet (1).png" id="1_fv8sb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy8cs"]
+size = Vector2(414, 547)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dyxq1"]
+atlas = ExtResource("1_fv8sb")
+region = Rect2(0, 541, 461, 541)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1qqhi"]
+atlas = ExtResource("1_fv8sb")
+region = Rect2(0, 0, 461, 541)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ll77n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dyxq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1qqhi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1180942490]
+script = ExtResource("1_dyxq1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=754733708]
+position = Vector2(28, -6.5)
+shape = SubResource("RectangleShape2D_wy8cs")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1450641880]
+position = Vector2(9, -9)
+sprite_frames = SubResource("SpriteFrames_ll77n")
+frame_progress = 0.91308725
+
+[node name="Timer" type="Timer" parent="." unique_id=1115009243]
+wait_time = 2.0
+autostart = true
