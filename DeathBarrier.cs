@@ -6,7 +6,7 @@ public partial class DeathBarrier : Area2D
 	{
 		BodyEntered += OnBodyEntered;
 	}
-
+	private int six = 67;
 	private void OnBodyEntered(Node2D body)
 	{
 		if (body is guy)

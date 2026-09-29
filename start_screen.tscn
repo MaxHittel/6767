@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bsnqtgo652kxe"]
+
+[ext_resource type="Script" uid="uid://cyd58tloiov0l" path="res://startscreen.cs" id="1_ncxyx"]
+
+[node name="Control" type="Control" unique_id=1556781698]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ncxyx")
+
+[node name="Button" type="Button" parent="." unique_id=617772588]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 192.0
+offset_right = 761.0
+offset_bottom = 309.0
+text = "1"
+
+[node name="Button2" type="Button" parent="." unique_id=1285233552]
+layout_mode = 0
+offset_left = 101.0
+offset_top = 348.0
+offset_right = 782.0
+offset_bottom = 465.0
+text = "2"
+
+[node name="Button3" type="Button" parent="." unique_id=691665638]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 517.0
+offset_right = 829.0
+offset_bottom = 634.0
+text = "3"
+
+[connection signal="pressed" from="Button" to="." method="start_level" binds= [1]]
+[connection signal="pressed" from="Button2" to="." method="start_level" binds= [2]]
+[connection signal="pressed" from="Button3" to="." method="start_level" binds= [3]]
