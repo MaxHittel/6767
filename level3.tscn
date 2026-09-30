@@ -883,6 +883,8 @@ texture = ExtResource("4_ci4mn")
 0:1/size_in_atlas = Vector2i(15, 6)
 0:1/0 = 0
 0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-108, 16, -40, 20, 36, 24, 88, 24, 24, 40, -36, 32, -108, 24)
+29:0/size_in_atlas = Vector2i(12, 9)
+29:0/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_wy8cs"]
 physics_layer_0/collision_layer = 1
@@ -925,7 +927,7 @@ scale = Vector2(24.64706, 20.60053)
 texture = ExtResource("2_rqrji")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1507714626]
-tile_map_data = PackedByteArray("AABeABQAAAAAAAEAAACOABEAAAAQAAAAAAC4APH/AAAQAAAAAABvAPL/AAAQAAAAAAA=")
+tile_map_data = PackedByteArray("AACOABEAAAAdAAAAAAC4APH/AAAdAAAAAABvAPL/AAAdAAAAAABdABMAAAAAAAgAAAA=")
 tile_set = SubResource("TileSet_wy8cs")
 
 [node name="Player" parent="." unique_id=1233363735 instance=ExtResource("5_sotx7")]
